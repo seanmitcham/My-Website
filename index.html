@@ -2,49 +2,85 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sean Mitcham | Professional Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <nav>
-        <a href="index.html">Home</a> |
-        <a href="resume.html">Resume</a> |
-        <a href="goals.html">Goals &amp; Objectives</a> |
-        <a href="portfolio.html">Portfolio</a> |
-        <a href="interview.html">Interview</a>
+    <header class="site-header">
+        <div class="header-inner">
+            <h1>Sean Mitcham</h1>
+            <p class="subtitle" style="color:#f7f4ef;">Computer Information Systems &amp; Business Administration | Northwestern State University</p>
+        </div>
+    </header>
+
+    <nav class="site-nav">
+        <ul>
+            <li><a href="index.html" class="current">Home</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="goals.html">Goals &amp; Objectives</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="interview.html">Interview</a></li>
+        </ul>
     </nav>
 
-    <hr>
+    <div class="page-wrap">
+        <main>
+            <article class="content-surface">
 
-    <h1>Sean Mitcham</h1>
+                <figure class="styled-image">
+                    <img src="images/profile.jpg" alt="Profile picture of Sean Mitcham" class="img-rounded-shadow" width="220">
+                    <figcaption>Effect: rounded (circular crop) + drop shadow</figcaption>
+                </figure>
 
-    <img src="images/profile.jpg" alt="Profile picture of Sean Mitcham" width="250">
+                <h2>About Me</h2>
+                <p>
+                    I'm a Computer Information Systems and Business Administration double major
+                    at Northwestern State University, graduating in May 2027. I'm currently an
+                    IT intern at Natchitoches Regional Medical Center (NRMC), where I'm gaining
+                    hands-on experience in the healthcare technology field. I'm interested in
+                    pursuing a career in banking or IT after graduation, combining my technical
+                    background with my business coursework. Outside of school and work, I'm an
+                    avid golfer and enjoy following sports of all kinds.
+                </p>
 
-    <h2>About Me</h2>
-    <p>
-        I'm a Computer Information Systems and Business Administration double major
-        at Northwestern State University, graduating in May 2027. I'm currently an
-        IT intern at Natchitoches Regional Medical Center (NRMC), where I'm gaining
-        hands-on experience in the healthcare technology field. I'm interested in
-        pursuing a career in banking or IT after graduation, combining my technical
-        background with my business coursework. Outside of school and work, I'm an
-        avid golfer and enjoy following sports of all kinds.
-    </p>
+                <p>
+                    Connect with me on
+                    <a href="https://www.linkedin.com/in/sean-mitcham-042b1b352/" target="_blank">LinkedIn</a>.
+                </p>
 
-    <p>
-        Connect with me on
-        <a href="https://www.linkedin.com/in/sean-mitcham-042b1b352/" target="_blank">LinkedIn</a>.
-    </p>
+            </article>
 
-    <hr>
+            <section class="content-surface">
+                <h2>Contact Me</h2>
+                <form class="contact-form" action="#" method="post">
+                    <div class="form-group">
+                        <label for="contact-name">Name</label>
+                        <input type="text" id="contact-name" name="contact-name" required>
+                    </div>
 
-    <nav>
-        <a href="index.html">Home</a> |
-        <a href="resume.html">Resume</a> |
-        <a href="goals.html">Goals &amp; Objectives</a> |
-        <a href="portfolio.html">Portfolio</a> |
-        <a href="interview.html">Interview</a>
-    </nav>
+                    <div class="form-group">
+                        <label for="contact-email">Email Address</label>
+                        <input type="email" id="contact-email" name="contact-email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact-comments">Comments</label>
+                        <textarea id="contact-comments" name="contact-comments" required></textarea>
+                    </div>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <p>Sean Mitcham</p>
+        <p><a href="mailto:sean13myka@gmail.com">sean13myka@gmail.com</a></p>
+        <p>Last edited: July 26, 2026</p>
+    </footer>
 
 </body>
 </html>

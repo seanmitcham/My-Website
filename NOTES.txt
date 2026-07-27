@@ -1,0 +1,48 @@
+=== PROJECT 2 UPDATE (CSS) ===
+New/changed files: styles.css, images/background.svg, and all 5 HTML pages
+(updated to link the stylesheet, add header/nav/footer structure, and a
+Contact form on the Home page + CSS Showcase on the Portfolio page).
+
+IMPORTANT: your images/profile.jpg is NOT in this download since it only
+lives in your GitHub repo. Before uploading:
+1. Download profile.jpg from your GitHub repo's images folder (or use the
+   same photo you used before), and place it in the images/ folder here
+   so it sits alongside background.svg.
+2. Upload everything (all HTML files, styles.css, resume.pdf, and the
+   images folder with BOTH profile.jpg and background.svg inside) to your
+   existing GitHub repo, replacing the old files.
+3. Commit and give GitHub Pages a minute to rebuild, then hard refresh.
+
+=== ORIGINAL PROJECT 1 NOTES BELOW ===
+
+BEFORE UPLOADING TO GITHUB, DO THIS:
+
+1. Open each .html file and replace every [bracketed placeholder] with your
+   real info (I left them as clear placeholders so you can find them fast -
+   just Ctrl+F for the "[" character in each file).
+
+2. Add your photo:
+   - Save a headshot (or professional placeholder image) as profile.jpg
+   - Put it inside the images/ folder
+   - Must be named exactly profile.jpg (or update the src= in index.html
+     to match whatever filename you use)
+
+3. Add your resume PDF:
+   - Save your resume as resume.pdf
+   - Put it in the main PortfolioWebsite folder (same level as index.html)
+
+4. Update the LinkedIn link in index.html with your real profile URL
+   (or leave it pointing to linkedin.com if you don't have one yet)
+
+5. Once everything is filled in, upload the WHOLE folder's contents
+   (not the folder itself) to your GitHub repo, then turn on GitHub Pages
+   as described in your assignment doc.
+
+Final folder should look like:
+  index.html
+  resume.html
+  goals.html
+  portfolio.html
+  interview.html
+  resume.pdf
+  images/profile.jpg

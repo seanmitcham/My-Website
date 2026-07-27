@@ -1,0 +1,482 @@
+/* =========================================================
+   Sean Mitcham | Professional Portfolio
+   Shared external stylesheet
+   ========================================================= */
+
+:root {
+  --primary: #2f1a52;      /* deep purple */
+  --primary-light: #4b2e83;
+  --accent: #c9922e;       /* warm gold */
+  --accent-light: #e7b85c;
+  --text-dark: #2a2a2a;
+  --text-light: #f7f4ef;
+  --surface: rgba(255, 255, 255, 0.92);
+  --surface-solid: #ffffff;
+  --border-soft: #e3ddd0;
+  --max-width: 960px;
+}
+
+/* ---------- Reset & base ---------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  color: var(--text-dark);
+  line-height: 1.6;
+  background-image: url("images/background.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+h1, h2, h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--primary);
+  line-height: 1.25;
+}
+
+a {
+  color: var(--primary-light);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ---------- Page wrapper for readability over background ---------- */
+.page-wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem 2rem;
+}
+
+.content-surface {
+  background: var(--surface);
+  border-radius: 8px;
+  padding: 1.75rem 2rem;
+  margin-top: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* ---------- Header ---------- */
+header.site-header {
+  background: var(--primary);
+  color: var(--text-light);
+  padding: 1.25rem 1.5rem 0.5rem;
+}
+
+header.site-header .header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+header.site-header h1 {
+  color: var(--text-light);
+  margin: 0 0 0.75rem;
+  font-size: 2rem;
+}
+
+/* ---------- Navigation ---------- */
+nav.site-nav {
+  background: var(--primary);
+}
+
+nav.site-nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+nav.site-nav li {
+  margin: 0;
+}
+
+nav.site-nav a {
+  display: block;
+  padding: 0.85rem 1.1rem;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border-bottom: 3px solid transparent;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+/* link states, in required order: link, visited, hover, active */
+nav.site-nav a:link {
+  color: var(--text-light);
+}
+
+nav.site-nav a:visited {
+  color: var(--accent-light);
+}
+
+nav.site-nav a:hover {
+  background-color: var(--primary-light);
+  border-bottom-color: var(--accent);
+  color: var(--text-light);
+}
+
+nav.site-nav a:active {
+  background-color: var(--accent);
+  color: var(--primary);
+  border-bottom-color: var(--text-light);
+}
+
+nav.site-nav a.current {
+  border-bottom-color: var(--accent);
+}
+
+/* ---------- Main content typography ---------- */
+main {
+  display: block;
+}
+
+article h1:first-child {
+  margin-top: 0;
+}
+
+.subtitle {
+  color: #6b6b6b;
+  font-style: italic;
+  margin-top: -0.5rem;
+}
+
+/* ---------- Footer ---------- */
+footer.site-footer {
+  background: var(--primary);
+  color: var(--text-light);
+  text-align: center;
+  padding: 1.5rem 1rem;
+  margin-top: 2.5rem;
+  font-size: 0.9rem;
+}
+
+footer.site-footer p {
+  margin: 0.25rem 0;
+}
+
+footer.site-footer a {
+  color: var(--accent-light);
+}
+
+/* ---------- Image effects ---------- */
+figure.styled-image {
+  display: inline-block;
+  margin: 1rem 1rem 1.5rem 0;
+  text-align: center;
+}
+
+figure.styled-image figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: #6b6b6b;
+  max-width: 250px;
+}
+
+.img-rounded-shadow {
+  border-radius: 50%;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  border: 4px solid var(--surface-solid);
+}
+
+.img-grayscale-hover {
+  filter: grayscale(100%);
+  border-radius: 8px;
+  border: 3px solid var(--accent);
+  transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+.img-grayscale-hover:hover {
+  filter: grayscale(0%);
+  transform: scale(1.03);
+}
+
+/* ---------- CSS Showcase (Portfolio page) ---------- */
+.showcase-section {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 2px dashed var(--border-soft);
+}
+
+.showcase-item {
+  margin-bottom: 2.25rem;
+}
+
+.showcase-label {
+  display: inline-block;
+  background: var(--primary);
+  color: var(--text-light);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  margin-bottom: 0.6rem;
+}
+
+/* Text shadow demo */
+.text-shadow-demo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--primary);
+  text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Glow demo */
+.text-glow-demo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+  background: var(--primary);
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  text-shadow: 0 0 8px var(--accent-light), 0 0 16px var(--accent);
+}
+
+/* Letter spacing demo */
+.letter-spacing-demo {
+  font-size: 1.4rem;
+  letter-spacing: 0.5em;
+  color: var(--primary-light);
+  text-transform: uppercase;
+}
+
+/* Gradient text demo (other text effect) */
+.gradient-text-demo {
+  font-size: 2rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: var(--primary);
+}
+
+/* Image filter demo */
+.showcase-img-filter {
+  width: 160px;
+  filter: sepia(0.6) contrast(1.1);
+  border-radius: 8px;
+}
+
+/* Image shadow demo */
+.showcase-img-shadow {
+  width: 160px;
+  border-radius: 8px;
+  box-shadow: 10px 10px 0 var(--accent);
+}
+
+/* Image border effect demo */
+.showcase-img-border {
+  width: 160px;
+  border-radius: 8px;
+  border: 6px double var(--primary);
+  padding: 4px;
+}
+
+/* Image hover zoom demo (other image effect) */
+.showcase-img-hover {
+  width: 160px;
+  border-radius: 8px;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.showcase-img-hover img {
+  transition: transform 0.5s ease;
+  display: block;
+}
+
+.showcase-img-hover:hover img {
+  transform: scale(1.25);
+}
+
+/* Linear gradient demo */
+.gradient-box-demo {
+  width: 100%;
+  max-width: 320px;
+  height: 90px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 50%, var(--primary-light) 100%);
+}
+
+/* Animation demo */
+@keyframes float-badge {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-14px); }
+  100% { transform: translateY(0); }
+}
+
+.animation-demo {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  text-align: center;
+  animation: float-badge 2.2s ease-in-out infinite;
+}
+
+/* Transition demo */
+.transition-demo-btn {
+  padding: 0.75rem 1.5rem;
+  background: var(--primary);
+  color: var(--text-light);
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.4s ease, letter-spacing 0.4s ease, transform 0.4s ease;
+}
+
+.transition-demo-btn:hover {
+  background: var(--accent);
+  color: var(--primary);
+  letter-spacing: 0.1em;
+  transform: translateY(-3px);
+}
+
+/* Transformation demo */
+.transform-demo {
+  width: 110px;
+  height: 70px;
+  background: var(--primary-light);
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  transition: transform 0.5s ease;
+}
+
+.transform-demo:hover {
+  transform: rotate(8deg) scale(1.1);
+}
+
+.showcase-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+/* ---------- Contact form ---------- */
+.contact-form {
+  max-width: 500px;
+}
+
+.contact-form .form-group {
+  margin-bottom: 1.1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+  color: var(--primary);
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--border-soft);
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(201, 146, 46, 0.25);
+}
+
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.contact-form button[type="submit"] {
+  padding: 0.75rem 1.75rem;
+  background: var(--primary);
+  color: var(--text-light);
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button[type="submit"]:hover {
+  background: var(--accent);
+  color: var(--primary);
+}
+
+/* ---------- Responsive design ---------- */
+@media (max-width: 700px) {
+  header.site-header h1 {
+    font-size: 1.5rem;
+  }
+
+  nav.site-nav ul {
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+  }
+
+  nav.site-nav a {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .content-surface {
+    padding: 1.25rem 1.25rem;
+    margin-top: 1rem;
+  }
+
+  .showcase-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .text-shadow-demo,
+  .text-glow-demo,
+  .gradient-text-demo {
+    font-size: 1.3rem;
+  }
+
+  .letter-spacing-demo {
+    letter-spacing: 0.25em;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .page-wrap {
+    padding: 0 1rem 1.5rem;
+  }
+
+  header.site-header {
+    padding: 1rem 1rem 0.25rem;
+  }
+}
